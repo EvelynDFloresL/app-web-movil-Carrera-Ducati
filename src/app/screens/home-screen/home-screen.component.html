@@ -99,7 +99,7 @@
                       <td *ngIf="tiene_juegos_pendientes" style="text-align: center;">
                           <mat-icon class="icon-play" *ngIf="codigo.participaciones < 2" style="cursor: pointer;" (click)="jugarParticipacion(codigo)">play_circle_outline</mat-icon>
                       </td>
-                      <td style="min-width: 100px; text-align: center;">{{codigo.creation | date: 'dd-MM-yyyy'}}</td>
+                      <td style="min-width: 100px; text-align: center;">{{codigo.creation | date: 'dd/MM/yyyy'}}</td>
                       <td style="text-align: center;">{{codigo.codigo}}</td>
                       <td style="text-align: center;">{{codigo.puntos_totales}}</td>
                       <td style="min-width: 100px; text-align: center;">{{codigo.puntos_codigo}}</td>

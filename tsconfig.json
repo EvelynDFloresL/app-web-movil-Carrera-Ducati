@@ -9,8 +9,8 @@
     "strictPropertyInitialization": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": false,
-    "noImplicitAny": false,
+    "noImplicitReturns": false,/*modificamos*/
+    "noImplicitAny": false,/*modificamos*/
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,

@@ -22,6 +22,7 @@ export class RegistroScreenComponent implements OnInit{
   public edades: any[] = [];
 
   constructor(
+    //inyectamos el servicio
     private usuariosService: UsuariosService
   ){}
 
