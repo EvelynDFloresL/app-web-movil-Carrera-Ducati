@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +26,7 @@ import { FooterAppComponent } from './partials/footer-app/footer-app.component';
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
 import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/bases-promocion-screen.component';
 import { PoliticaPrivacidadScreenComponent } from './screens/politica-privacidad-screen/politica-privacidad-screen.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,13 @@ import { PoliticaPrivacidadScreenComponent } from './screens/politica-privacidad
     MatSelectModule,
     MatCheckboxModule,
     NgxMaskDirective,
-    MatSidenavModule
+    MatSidenavModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [
     provideNgxMask()
