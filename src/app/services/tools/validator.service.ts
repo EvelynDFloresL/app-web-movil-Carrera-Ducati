@@ -70,8 +70,13 @@ export class ValidatorService {
     return  (max >= input && input  >= min);
 
   }
+  //validación para solo letras y espacios
+  onlyLetters(input: string): boolean {
+    let pat = new RegExp('^([A-Za-zÑñáéíóúÁÉÍÓÚ ]+)$');
+    return pat.test(input);
+  }
 
-  words(input:any){
+  words(input:any){//Esta funcion tiene el mismo proposito de validar solo letras
     let pat = new RegExp('^([A-Za-zÑñáéíóúÁÉÍÓÚ ]+)$');
     console.log(pat.test(input), input);
     return pat.test(input);

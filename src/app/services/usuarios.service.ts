@@ -33,10 +33,14 @@ export class UsuariosService {
 
     if(!this.validatorService.required(data["first_name"])){
       error["first_name"] = this.errorService.required;
+    }else if (!this.validatorService.onlyLetters(data["first_name"])) {
+      error["first_name"] = this.errorService.onlyLetters;  // Usamos el error de solo letras
     }
 
     if(!this.validatorService.required(data["last_name"])){
       error["last_name"] = this.errorService.required;
+    }else if (!this.validatorService.onlyLetters(data["last_name"])) {
+      error["last_name"] = this.errorService.onlyLetters;  // Usamos el error de solo letras
     }
 
     if(!this.validatorService.required(data["email"])){
@@ -57,6 +61,8 @@ export class UsuariosService {
 
     if(!this.validatorService.required(data["ciudad"])){
       error["ciudad"] = this.errorService.required;
+    }else if (!this.validatorService.onlyLetters(data["ciudad"])) {
+      error["ciudad"] = this.errorService.onlyLetters;  // Usamos el error de solo letras
     }
 
     if(!this.validatorService.required(data["edad"])){
