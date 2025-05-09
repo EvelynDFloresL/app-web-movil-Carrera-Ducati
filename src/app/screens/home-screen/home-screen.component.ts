@@ -32,7 +32,7 @@ export class HomeScreenComponent implements OnInit{
   }
 
   public saberMas(){
-
+    this.router.navigate(["bases-promocion"]);
   }
 
   public initInputsCodigo(){
@@ -51,7 +51,7 @@ export class HomeScreenComponent implements OnInit{
   }
 
   public registrarCodigo(){
-    this.router.navigate(["bases-promocion"]);
+    this.router.navigate(["instrucciones"]);
   }
 
   public obtenerCodigos(){

@@ -1,6 +1,6 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginScreenComponent } from './screens/login-screen/login-screen.component';
@@ -27,6 +27,12 @@ import { HomeScreenComponent } from './screens/home-screen/home-screen.component
 import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/bases-promocion-screen.component';
 import { PoliticaPrivacidadScreenComponent } from './screens/politica-privacidad-screen/politica-privacidad-screen.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { InstruccionesScreenComponent } from './screens/instrucciones-screen/instrucciones-screen.component';
+import { JuegoScreenComponent } from './screens/juego-screen/juego-screen.component';
+import { JuegoTerminadoScreenComponent } from './screens/juego-terminado-screen/juego-terminado-screen.component';
+import { NuevoLookScreenComponent } from './screens/nuevo-look-screen/nuevo-look-screen.component';
+import { TerminosYCondicionesScreenComponent } from './screens/terminos-y-condiciones-screen/terminos-y-condiciones-screen.component';
+import { UsuarioScreenComponent } from './screens/usuario-screen/usuario-screen.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +45,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     HomeScreenComponent,
     BasesPromocionScreenComponent,
     PoliticaPrivacidadScreenComponent,
+    InstruccionesScreenComponent,
+    JuegoScreenComponent,
+    JuegoTerminadoScreenComponent,
+    NuevoLookScreenComponent,
+    TerminosYCondicionesScreenComponent,
+    UsuarioScreenComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,12 +66,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     MatCheckboxModule,
     NgxMaskDirective,
     MatSidenavModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    })
+    HttpClientModule
   ],
   providers: [
     provideNgxMask()

@@ -17,7 +17,7 @@ export class FooterAppComponent implements OnInit{
   }
 
   public terminosCondiciones(){
-
+    this.router.navigate(["terminos-y-condiciones"]);
   }
 
   public avisoPrivacidad(){

@@ -31,10 +31,16 @@ export class LeftSidebarComponent implements OnInit{
   }
 
   public goBasesPromocion(){
+    this.router.navigate(["bases-promocion"]);
 
   }
 
   public goTiendasParticipantes(){
+    window.open('https://docs.google.com/document/d/10J6EUDqat7ISeHheKPc-oJDQGQ7xXQO0/edit?tab=t.0', '_blank');
+
+  }
+  public goPerfil(){
+    this.router.navigate(["usuario-screen"]);
 
   }
 
